@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Vincenzo Parente</title>
+  <desc id="desc">MSc Computer Science and Engineering at Politecnico di Milano. An animation turns a signal into a graph and then into a satisfied logic formula.</desc>
+  <style>
+    .sans { font-family: Inter, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #f0f6fc; }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #8b949e; }
+    .expr { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #f0f6fc; }
+
+    .wave { fill: none; stroke: #8b949e; stroke-width: 1.5; stroke-dasharray: 620; animation: wave 14s linear infinite; }
+    @keyframes wave {
+      0%, 28% { stroke-dashoffset: 0; opacity: 1; }
+      34% { stroke-dashoffset: 0; opacity: 0; }
+      35%, 91% { stroke-dashoffset: 620; opacity: 0; }
+      92% { stroke-dashoffset: 620; opacity: 1; }
+      100% { stroke-dashoffset: 0; opacity: 1; }
+    }
+
+    .edges line { stroke: #8b949e; stroke-width: 1.2; }
+    .edges { opacity: 0; animation: edges 14s ease-in-out infinite; }
+    @keyframes edges { 0%, 40% { opacity: 0; } 46%, 58% { opacity: 1; } 62%, 100% { opacity: 0; } }
+
+    .nodes circle { fill: #f0f6fc; stroke: #f0f6fc; stroke-width: 1.5; }
+    
+    @keyframes n0 {
+      0%, 28.0% { transform: translate(660.0px, 200.0px);  }
+      38.0%, 60.0% { transform: translate(690.0px, 140.0px);  }
+      70.0% { transform: translate(700.0px, 150.0px);  }
+      90.0% { transform: translate(700.0px, 150.0px);  }
+      92.0% { transform: translate(700.0px, 150.0px);  }
+      100% { transform: translate(660.0px, 200.0px); }
+    }
+    .n0 { animation: n0 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(660.0px, 200.0px); }
+    @keyframes n1 {
+      0%, 28.4% { transform: translate(706.0px, 245.4px); fill-opacity: 1; }
+      38.4%, 60.4% { transform: translate(745.0px, 255.0px); fill-opacity: 1; }
+      70.2% { transform: translate(740.0px, 150.0px); fill-opacity: 0; }
+      90.0% { transform: translate(740.0px, 150.0px); fill-opacity: 0; }
+      92.0% { transform: translate(740.0px, 150.0px); fill-opacity: 1; }
+      100% { transform: translate(706.0px, 245.4px); }
+    }
+    .n1 { animation: n1 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(706.0px, 245.4px); }
+    @keyframes n2 {
+      0%, 28.8% { transform: translate(752.0px, 256.5px);  }
+      38.8%, 60.8% { transform: translate(815.0px, 105.0px);  }
+      70.4% { transform: translate(780.0px, 150.0px);  }
+      90.0% { transform: translate(780.0px, 150.0px);  }
+      92.0% { transform: translate(780.0px, 150.0px);  }
+      100% { transform: translate(752.0px, 256.5px); }
+    }
+    .n2 { animation: n2 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(752.0px, 256.5px); }
+    @keyframes n3 {
+      0%, 29.2% { transform: translate(798.0px, 224.8px);  }
+      39.2%, 61.2% { transform: translate(865.0px, 205.0px);  }
+      70.6% { transform: translate(820.0px, 150.0px);  }
+      90.0% { transform: translate(820.0px, 150.0px);  }
+      92.0% { transform: translate(820.0px, 150.0px);  }
+      100% { transform: translate(798.0px, 224.8px); }
+    }
+    .n3 { animation: n3 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(798.0px, 224.8px); }
+    @keyframes n4 {
+      0%, 29.6% { transform: translate(844.0px, 174.3px); fill-opacity: 1; }
+      39.6%, 61.6% { transform: translate(905.0px, 305.0px); fill-opacity: 1; }
+      70.8% { transform: translate(860.0px, 150.0px); fill-opacity: 0; }
+      90.0% { transform: translate(860.0px, 150.0px); fill-opacity: 0; }
+      92.0% { transform: translate(860.0px, 150.0px); fill-opacity: 1; }
+      100% { transform: translate(844.0px, 174.3px); }
+    }
+    .n4 { animation: n4 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(844.0px, 174.3px); }
+    @keyframes n5 {
+      0%, 30.0% { transform: translate(890.0px, 143.3px);  }
+      40.0%, 62.0% { transform: translate(950.0px, 130.0px);  }
+      71.0% { transform: translate(900.0px, 150.0px);  }
+      90.0% { transform: translate(900.0px, 150.0px);  }
+      92.0% { transform: translate(900.0px, 150.0px);  }
+      100% { transform: translate(890.0px, 143.3px); }
+    }
+    .n5 { animation: n5 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(890.0px, 143.3px); }
+    @keyframes n6 {
+      0%, 30.4% { transform: translate(936.0px, 155.2px); fill-opacity: 1; }
+      40.4%, 62.4% { transform: translate(1000.0px, 235.0px); fill-opacity: 1; }
+      71.2% { transform: translate(940.0px, 150.0px); fill-opacity: 0; }
+      90.0% { transform: translate(940.0px, 150.0px); fill-opacity: 0; }
+      92.0% { transform: translate(940.0px, 150.0px); fill-opacity: 1; }
+      100% { transform: translate(936.0px, 155.2px); }
+    }
+    .n6 { animation: n6 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(936.0px, 155.2px); }
+    @keyframes n7 {
+      0%, 30.8% { transform: translate(982.0px, 201.0px); fill-opacity: 1; }
+      40.8%, 62.8% { transform: translate(1055.0px, 110.0px); fill-opacity: 1; }
+      71.4% { transform: translate(980.0px, 150.0px); fill-opacity: 0; }
+      90.0% { transform: translate(980.0px, 150.0px); fill-opacity: 0; }
+      92.0% { transform: translate(980.0px, 150.0px); fill-opacity: 1; }
+      100% { transform: translate(982.0px, 201.0px); }
+    }
+    .n7 { animation: n7 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(982.0px, 201.0px); }
+    @keyframes n8 {
+      0%, 31.2% { transform: translate(1028.0px, 246.0px);  }
+      41.2%, 63.2% { transform: translate(1075.0px, 300.0px);  }
+      71.6% { transform: translate(1020.0px, 150.0px);  }
+      90.0% { transform: translate(1020.0px, 150.0px);  }
+      92.0% { transform: translate(1020.0px, 150.0px);  }
+      100% { transform: translate(1028.0px, 246.0px); }
+    }
+    .n8 { animation: n8 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(1028.0px, 246.0px); }
+    @keyframes n9 {
+      0%, 31.6% { transform: translate(1074.0px, 256.3px);  }
+      41.6%, 63.6% { transform: translate(1115.0px, 195.0px);  }
+      71.8% { transform: translate(1060.0px, 150.0px);  }
+      90.0% { transform: translate(1060.0px, 150.0px);  }
+      92.0% { transform: translate(1060.0px, 150.0px);  }
+      100% { transform: translate(1074.0px, 256.3px); }
+    }
+    .n9 { animation: n9 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(1074.0px, 256.3px); }
+    @keyframes n10 {
+      0%, 32.0% { transform: translate(1120.0px, 223.9px); fill-opacity: 1; }
+      42.0%, 64.0% { transform: translate(790.0px, 320.0px); fill-opacity: 1; }
+      72.0% { transform: translate(1100.0px, 150.0px); fill-opacity: 0; }
+      90.0% { transform: translate(1100.0px, 150.0px); fill-opacity: 0; }
+      92.0% { transform: translate(1100.0px, 150.0px); fill-opacity: 1; }
+      100% { transform: translate(1120.0px, 223.9px); }
+    }
+    .n10 { animation: n10 14s cubic-bezier(.65,0,.35,1) infinite; transform: translate(1120.0px, 223.9px); }
+
+    .formula { opacity: 0; animation: formula 14s ease-in-out infinite; }
+    @keyframes formula { 0%, 72% { opacity: 0; } 77%, 88% { opacity: 1; } 91%, 100% { opacity: 0; } }
+
+    .label { opacity: 0; animation: 14s ease-in-out infinite; }
+    .l1 { opacity: 1; animation-name: l1; } .l2 { animation-name: l2; } .l3 { animation-name: l3; }
+    @keyframes l1 { 0%, 28% { opacity: 1; } 32%, 94% { opacity: 0; } 98%, 100% { opacity: 1; } }
+    @keyframes l2 { 0%, 34% { opacity: 0; } 40%, 60% { opacity: 1; } 64%, 100% { opacity: 0; } }
+    @keyframes l3 { 0%, 66% { opacity: 0; } 72%, 90% { opacity: 1; } 94%, 100% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, .l1, .l2, .l3 { animation: none !important; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="20" fill="none" stroke="#30363d"/>
+
+  <text class="mono" x="64" y="118" font-size="14" letter-spacing="3">POLITECNICO DI MILANO · MSC CSE</text>
+  <text class="sans" x="60" y="210" font-size="84" font-weight="700" letter-spacing="-3">Vincenzo</text>
+  <text class="sans" x="60" y="292" font-size="84" font-weight="700" letter-spacing="-3">Parente</text>
+  <text class="mono" x="64" y="342" font-size="16">applied AI · logic · curiosity</text>
+
+  <g fill="#30363d">
+    <circle cx="660" cy="80" r="1"/>
+    <circle cx="660" cy="120" r="1"/>
+    <circle cx="660" cy="160" r="1"/>
+    <circle cx="660" cy="200" r="1"/>
+    <circle cx="660" cy="240" r="1"/>
+    <circle cx="660" cy="280" r="1"/>
+    <circle cx="660" cy="320" r="1"/>
+    <circle cx="700" cy="80" r="1"/>
+    <circle cx="700" cy="120" r="1"/>
+    <circle cx="700" cy="160" r="1"/>
+    <circle cx="700" cy="200" r="1"/>
+    <circle cx="700" cy="240" r="1"/>
+    <circle cx="700" cy="280" r="1"/>
+    <circle cx="700" cy="320" r="1"/>
+    <circle cx="740" cy="80" r="1"/>
+    <circle cx="740" cy="120" r="1"/>
+    <circle cx="740" cy="160" r="1"/>
+    <circle cx="740" cy="200" r="1"/>
+    <circle cx="740" cy="240" r="1"/>
+    <circle cx="740" cy="280" r="1"/>
+    <circle cx="740" cy="320" r="1"/>
+    <circle cx="780" cy="80" r="1"/>
+    <circle cx="780" cy="120" r="1"/>
+    <circle cx="780" cy="160" r="1"/>
+    <circle cx="780" cy="200" r="1"/>
+    <circle cx="780" cy="240" r="1"/>
+    <circle cx="780" cy="280" r="1"/>
+    <circle cx="780" cy="320" r="1"/>
+    <circle cx="820" cy="80" r="1"/>
+    <circle cx="820" cy="120" r="1"/>
+    <circle cx="820" cy="160" r="1"/>
+    <circle cx="820" cy="200" r="1"/>
+    <circle cx="820" cy="240" r="1"/>
+    <circle cx="820" cy="280" r="1"/>
+    <circle cx="820" cy="320" r="1"/>
+    <circle cx="860" cy="80" r="1"/>
+    <circle cx="860" cy="120" r="1"/>
+    <circle cx="860" cy="160" r="1"/>
+    <circle cx="860" cy="200" r="1"/>
+    <circle cx="860" cy="240" r="1"/>
+    <circle cx="860" cy="280" r="1"/>
+    <circle cx="860" cy="320" r="1"/>
+    <circle cx="900" cy="80" r="1"/>
+    <circle cx="900" cy="120" r="1"/>
+    <circle cx="900" cy="160" r="1"/>
+    <circle cx="900" cy="200" r="1"/>
+    <circle cx="900" cy="240" r="1"/>
+    <circle cx="900" cy="280" r="1"/>
+    <circle cx="900" cy="320" r="1"/>
+    <circle cx="940" cy="80" r="1"/>
+    <circle cx="940" cy="120" r="1"/>
+    <circle cx="940" cy="160" r="1"/>
+    <circle cx="940" cy="200" r="1"/>
+    <circle cx="940" cy="240" r="1"/>
+    <circle cx="940" cy="280" r="1"/>
+    <circle cx="940" cy="320" r="1"/>
+    <circle cx="980" cy="80" r="1"/>
+    <circle cx="980" cy="120" r="1"/>
+    <circle cx="980" cy="160" r="1"/>
+    <circle cx="980" cy="200" r="1"/>
+    <circle cx="980" cy="240" r="1"/>
+    <circle cx="980" cy="280" r="1"/>
+    <circle cx="980" cy="320" r="1"/>
+    <circle cx="1020" cy="80" r="1"/>
+    <circle cx="1020" cy="120" r="1"/>
+    <circle cx="1020" cy="160" r="1"/>
+    <circle cx="1020" cy="200" r="1"/>
+    <circle cx="1020" cy="240" r="1"/>
+    <circle cx="1020" cy="280" r="1"/>
+    <circle cx="1020" cy="320" r="1"/>
+    <circle cx="1060" cy="80" r="1"/>
+    <circle cx="1060" cy="120" r="1"/>
+    <circle cx="1060" cy="160" r="1"/>
+    <circle cx="1060" cy="200" r="1"/>
+    <circle cx="1060" cy="240" r="1"/>
+    <circle cx="1060" cy="280" r="1"/>
+    <circle cx="1060" cy="320" r="1"/>
+    <circle cx="1100" cy="80" r="1"/>
+    <circle cx="1100" cy="120" r="1"/>
+    <circle cx="1100" cy="160" r="1"/>
+    <circle cx="1100" cy="200" r="1"/>
+    <circle cx="1100" cy="240" r="1"/>
+    <circle cx="1100" cy="280" r="1"/>
+    <circle cx="1100" cy="320" r="1"/>
+    <circle cx="1140" cy="80" r="1"/>
+    <circle cx="1140" cy="120" r="1"/>
+    <circle cx="1140" cy="160" r="1"/>
+    <circle cx="1140" cy="200" r="1"/>
+    <circle cx="1140" cy="240" r="1"/>
+    <circle cx="1140" cy="280" r="1"/>
+    <circle cx="1140" cy="320" r="1"/>
+  </g>
+
+  <path class="wave" d="M646.0,184.3 L650.0,188.7 L654.0,193.2 L658.0,197.7 L662.0,202.3 L666.0,206.8 L670.0,211.3 L674.0,215.7 L678.0,220.0 L682.0,224.2 L686.0,228.2 L690.0,232.1 L694.0,235.8 L698.0,239.3 L702.0,242.5 L706.0,245.4 L710.0,248.1 L714.0,250.5 L718.0,252.6 L722.0,254.3 L726.0,255.7 L730.0,256.8 L734.0,257.6 L738.0,257.9 L742.0,258.0 L746.0,257.6 L750.0,257.0 L754.0,255.9 L758.0,254.6 L762.0,252.8 L766.0,250.8 L770.0,248.5 L774.0,245.8 L778.0,242.9 L782.0,239.7 L786.0,236.3 L790.0,232.7 L794.0,228.8 L798.0,224.8 L802.0,220.6 L806.0,216.3 L810.0,211.9 L814.0,207.4 L818.0,202.9 L822.0,198.4 L826.0,193.9 L830.0,189.4 L834.0,184.9 L838.0,180.6 L842.0,176.4 L846.0,172.3 L850.0,168.4 L854.0,164.7 L858.0,161.2 L862.0,158.0 L866.0,155.0 L870.0,152.3 L874.0,149.8 L878.0,147.7 L882.0,145.9 L886.0,144.4 L890.0,143.3 L894.0,142.5 L898.0,142.1 L902.0,142.0 L906.0,142.3 L910.0,142.9 L914.0,143.9 L918.0,145.2 L922.0,146.9 L926.0,148.9 L930.0,151.2 L934.0,153.8 L938.0,156.7 L942.0,159.8 L946.0,163.2 L950.0,166.8 L954.0,170.6 L958.0,174.6 L962.0,178.8 L966.0,183.1 L970.0,187.5 L974.0,191.9 L978.0,196.4 L982.0,201.0 L986.0,205.5 L990.0,210.0 L994.0,214.4 L998.0,218.8 L1002.0,223.0 L1006.0,227.1 L1010.0,231.0 L1014.0,234.8 L1018.0,238.3 L1022.0,241.6 L1026.0,244.6 L1030.0,247.4 L1034.0,249.8 L1038.0,252.0 L1042.0,253.9 L1046.0,255.4 L1050.0,256.6 L1054.0,257.4 L1058.0,257.9 L1062.0,258.0 L1066.0,257.8 L1070.0,257.2 L1074.0,256.3 L1078.0,255.0 L1082.0,253.4 L1086.0,251.4 L1090.0,249.2 L1094.0,246.6 L1098.0,243.8 L1102.0,240.7 L1106.0,237.3 L1110.0,233.7 L1114.0,229.9 L1118.0,226.0 L1122.0,221.8 L1126.0,217.5 L1130.0,213.2 L1134.0,208.7"/>
+  <g class="edges">
+    <line x1="690" y1="140" x2="745" y2="255"/>
+    <line x1="690" y1="140" x2="815" y2="105"/>
+    <line x1="745" y1="255" x2="865" y2="205"/>
+    <line x1="815" y1="105" x2="865" y2="205"/>
+    <line x1="815" y1="105" x2="950" y2="130"/>
+    <line x1="865" y1="205" x2="950" y2="130"/>
+    <line x1="865" y1="205" x2="1000" y2="235"/>
+    <line x1="745" y1="255" x2="790" y2="320"/>
+    <line x1="790" y1="320" x2="905" y2="305"/>
+    <line x1="865" y1="205" x2="905" y2="305"/>
+    <line x1="905" y1="305" x2="1000" y2="235"/>
+    <line x1="950" y1="130" x2="1055" y2="110"/>
+    <line x1="1000" y1="235" x2="1115" y2="195"/>
+    <line x1="1055" y1="110" x2="1115" y2="195"/>
+    <line x1="1000" y1="235" x2="1075" y2="300"/>
+    <line x1="1075" y1="300" x2="1115" y2="195"/>
+  </g>
+  <g class="nodes">
+    <circle class="n0" r="6"/>
+    <circle class="n1" r="6"/>
+    <circle class="n2" r="6"/>
+    <circle class="n3" r="6"/>
+    <circle class="n4" r="6"/>
+    <circle class="n5" r="6"/>
+    <circle class="n6" r="6"/>
+    <circle class="n7" r="6"/>
+    <circle class="n8" r="6"/>
+    <circle class="n9" r="6"/>
+    <circle class="n10" r="6"/>
+  </g>
+
+  <g class="formula" text-anchor="middle">
+    <text class="expr" x="900" y="232" font-size="20">(x₁ ∨ ¬x₂) ∧ (x₃ ∨ x₅) ∧ ¬x₁₁</text>
+    <text class="mono" x="900" y="272" font-size="14" letter-spacing="2">→ SAT</text>
+  </g>
+
+  <g class="mono" font-size="13" letter-spacing="1">
+    <text class="label l1" x="660" y="368">01 — signal</text>
+    <text class="label l2" x="660" y="368">02 — structure</text>
+    <text class="label l3" x="660" y="368">03 — logic</text>
+  </g>
+</svg>

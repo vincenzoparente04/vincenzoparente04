@@ -11,7 +11,7 @@
 - **cdcl-sat-solver**: a Conflict-Driven Clause Learning SAT solver in C 
 - **digital-logic-network-prj**: a priority task-list manager in VHDL, as a 17-state FSM
 
-<sub> Also: [Tables-Game-Festival](https://github.com/vincenzoparente04/Tables-Game-Festival) · [Java-Travel-App](https://github.com/vincenzoparente04/Java-Travel-App) · [Banks-Data-Science-Project](https://github.com/vincenzoparente04/Banks-Data-Science-Project)</sub>
+<sub> Also: [festa-plan](https://github.com/vincenzoparente04/festa-plan) · [java-sealy-app](https://github.com/vincenzoparente04/java-sealy-app) · [banks-data-science-prj](https://github.com/vincenzoparente04/banks-data-science-prj)</sub>
 
 ### `~/stack`
 

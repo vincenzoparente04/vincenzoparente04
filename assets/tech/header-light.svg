@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 268" width="1000" height="268" role="img" aria-labelledby="title desc">
+  <title id="title">Vincenzo Parente</title>
+  <desc id="desc">MSc Computer Science and Engineering at Politecnico di Milano. AI track, applied machine learning, logic and math. Curious about everything.</desc>
+  <style>
+    .sans { font-family: Inter, -apple-system, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; fill: #111111; }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 17px; white-space: pre; }
+    .fg { fill: #111111; } .weak { fill: #6e7781; }
+    .cursor { fill: #111111; animation: blink 1.1s steps(1, end) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+  </style>
+  <text class="mono weak" x="4" y="30">$ whoami</text>
+  <text class="sans" x="0" y="96" font-size="60" font-weight="700" letter-spacing="-2">Vincenzo Parente</text>
+  <rect x="4" y="118" width="992" height="1" fill="#d0d7de"/>
+  <text class="mono" x="4" y="150"><tspan class="weak">msc       </tspan><tspan class="fg">Computer Science &amp; Engineering @ Politecnico di Milano</tspan></text>
+  <text class="mono" x="4" y="180"><tspan class="weak">focus     </tspan><tspan class="fg">AI track, applied ML, logic &amp; math</tspan></text>
+  <text class="mono" x="4" y="210"><tspan class="weak">curious   </tspan><tspan class="fg">about everything</tspan></text>
+  <text class="mono weak" x="4" y="252">$</text>
+  <rect class="cursor" x="22" y="238" width="10" height="18"/>
+</svg>

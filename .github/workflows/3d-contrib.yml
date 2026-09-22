@@ -1,4 +1,4 @@
-name: GitHub activity (3D)
+name: GitHub activity (3D + pixel stats)
 
 on:
   schedule:
@@ -9,6 +9,8 @@ on:
     paths:
       - .github/3d-contrib.json
       - .github/workflows/3d-contrib.yml
+      - scripts/stats.py
+      - scripts/pixel.py
 
 permissions:
   contents: write
@@ -25,10 +27,15 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           SETTING_JSON: .github/3d-contrib.json
 
+      - name: Pixel stats cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/stats.py ${{ github.repository_owner }}
+
       - name: Commit images
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib
-          git diff --cached --quiet || git commit -m "Update 3D contribution graph"
+          git add profile-3d-contrib assets/chess assets/tech
+          git diff --cached --quiet || git commit -m "Update activity images"
           git push

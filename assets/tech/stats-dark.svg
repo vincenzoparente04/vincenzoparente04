@@ -12,7 +12,7 @@
 <rect x="0.5" y="0.5" width="999" height="349" rx="12" fill="none" stroke="#30363d"/>
 <text x="32" y="44" class="weak">$ git stats --last 12 months</text>
 <text x="32" y="92" class="weak">contributions</text><text x="440" y="92" class="fg" text-anchor="end">458</text>
-<text x="32" y="122" class="weak">current streak</text><text x="440" y="122" class="fg" text-anchor="end">1 day</text>
+<text x="32" y="122" class="weak">current streak</text><text x="440" y="122" class="fg" text-anchor="end">0 days</text>
 <text x="32" y="152" class="weak">longest streak</text><text x="440" y="152" class="fg" text-anchor="end">14 days</text>
 <text x="32" y="182" class="weak">best day</text><text x="440" y="182" class="fg" text-anchor="end">24</text>
 <text x="32" y="212" class="weak">most active</text><text x="440" y="212" class="fg" text-anchor="end">sunday</text>

@@ -2,7 +2,9 @@ name: GitHub activity (3D + pixel stats)
 
 on:
   schedule:
-    - cron: "0 3 * * *" # every day at 03:00 UTC
+    # every 6 hours, off the top of the hour: ":00" slots are the most congested
+    # and scheduled runs there were starting 5-7 hours late
+    - cron: "23 */6 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -15,13 +17,20 @@ on:
 permissions:
   contents: write
 
+# a push-triggered run and a scheduled run must not race each other on git push
+concurrency:
+  group: activity-images
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v5
 
-      - uses: yoshi389111/github-profile-3d-contrib@latest
+      # pinned: "latest" is a moving branch upstream (currently the same commit as v0.9.3)
+      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
@@ -37,5 +46,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile-3d-contrib assets/chess assets/tech
-          git diff --cached --quiet || git commit -m "Update activity images"
-          git push
+          git diff --cached --quiet && exit 0
+          git commit -m "Update activity images"
+          # retry: GitHub occasionally rejects pushes server-side (e.g. "fatal error in
+          # commit_refs_rules"), and main may have moved if a README edit landed meanwhile
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            echo "push attempt $attempt failed, retrying"
+            sleep $((attempt * 30))
+          done
+          exit 1

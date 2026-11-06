@@ -43,7 +43,7 @@ def get(url, accept="application/vnd.github+json"):
     headers = {"Accept": accept, "User-Agent": "profile-stats"}
     if os.environ.get("GITHUB_TOKEN") and "api.github.com" in url:
         headers["Authorization"] = f"Bearer {os.environ['GITHUB_TOKEN']}"
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers)) as r:
+    with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30) as r:
         return r.read().decode()
 
 
@@ -57,6 +57,10 @@ def contributions():
         m = re.match(r"(\d+) contribution", label)
         counts[cell_id] = int(m[1]) if m else 0
     days = [(dt.date.fromisoformat(d), counts.get(cid, 0), lvl) for d, (cid, lvl) in cells.items()]
+    # the calendar is scraped HTML: if GitHub changes its markup, fail loudly instead of
+    # committing cards that say "0 contributions"
+    if len(days) < 300 or (any(lvl for _, _, lvl in days) and not any(n for _, n, _ in days)):
+        sys.exit(f"contribution calendar parse failed: {len(days)} days, {len(counts)} tooltips")
     return sorted(days)
 
 

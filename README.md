@@ -6,7 +6,7 @@
 ### `~/projects`
 
 - **gng-mental-health**: mood disorders detection from smartphone cognitive tasks · paper
-- **[se-final-project-mesos](https://github.com/vincenzoparente04/se-final-project-mesos)**: distributed multiplayer board game in Java 
+- **[mesos-board-game](https://github.com/vincenzoparente04/mesos-board-game)**: distributed multiplayer board game in Java 
 - **[if-i-wi-fi](https://github.com/vincenzoparente04/if-i-wi-fi)**: presence sensing from the Wi-Fi already in the room · [demo ↗](https://vincenzoparente04.github.io/if-i-wi-fi/)
 - **cdcl-sat-solver**: a Conflict-Driven Clause Learning SAT solver in C 
 - **digital-logic-network-prj**: a priority task-list manager in VHDL, as a 17-state FSM
